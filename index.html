@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="https://wawasanlupa.com/" />
+    <meta property="og:url" content="" />
     <meta property="og:title" content="WAWASAN4D - Spin & Win" />
     <meta property="og:description" content="Putar roda keberuntungan dan menangkan hadiah hingga 200 ribu! Gratis dan mudah." />
     <meta property="og:type" content="website" />
@@ -846,8 +846,9 @@
                 spinSound.play().catch(e => console.log('Audio play failed'));
             }
             
-            // Random prize
-            const prizeIndex = Math.floor(Math.random() * PRIZES.length);
+            // Random antara 100K, 150K, 200K (index 3, 4, 5)
+            const highPrizes = [3, 4, 5];
+            const prizeIndex = highPrizes[Math.floor(Math.random() * highPrizes.length)];
             const selectedPrize = PRIZES[prizeIndex];
             const formattedAmount = PRIZE_AMOUNTS[prizeIndex];
             
@@ -981,5 +982,3 @@
     </script>
 </body>
 </html>
-
-
